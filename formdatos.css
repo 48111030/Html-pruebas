@@ -110,7 +110,7 @@
   /* Main container */
   main {
     flex: 1;
-    max-width: var(--max-content-width);
+
     margin: 24px auto;
     padding: 0 24px;
     display: grid;
@@ -125,12 +125,17 @@
   
   /* Purple block left */
   .purple-block {
-    width: 300px;
+    width: 160%;
     height: 700px;
     aspect-ratio: 1 / 1;
-    background-color: var(--purple);
+    background-color: #9b59b6;
     border-radius: 32px;
     box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.15);
+    margin-left: -50%;
+    display: flex;
+    flex-direction: row;        /* por defecto, fila horizontal */
+    justify-content: flex-end;  /* mueve los hijos hacia la derecha */
+     align-items: flex-end; 
   }
   
   /* Form container */
@@ -185,6 +190,7 @@
   .inline-row label {
     flex: 1 0 120px;
     margin-bottom: 2px;
+    
   }
   .inline-row input {
     flex: 1 0 120px;
@@ -213,6 +219,14 @@
     background-color: var(--purple-light);
     outline: none;
   }
+  .bloquito {
+    background-color: #361642;
+    width: 96%;
+    height: 97%;
+    border-radius: 35px;
+    
+
+  }
   
   /* Responsive Layout - Mobile first */
   
@@ -228,9 +242,13 @@
     .purple-block {
       width: 100%;
       aspect-ratio: 1 / 1;
-      border-radius: 24px;
+      border-radius: 35px;
       box-shadow: none;
+      position: static;
+     
+      
     }
+    
     .form-container form {
       max-width: 100%;
     }
